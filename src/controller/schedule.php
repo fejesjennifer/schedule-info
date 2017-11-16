@@ -11,10 +11,10 @@ if(!isset($_GET['stop']) || !preg_match('/^[0-9A-Z]*$/',$_GET['stop'])) {
 }
 
 // 2. model-beli osztálynak valami függvényét
-$scheduleService = new BKKService();
+$scheduleService = new TextFileService();
 $departures = $scheduleService->getDepartures($stop);
 
-var_dump($departures);
+//var_dump($departures);
 
 // 3. meghívunk egy view-t
 require('../view/schedule.php');
